@@ -86,7 +86,7 @@ public class Main {
                 return div(a, b);
             }
         }
-        throw new IllegalArgumentException();
+        throw new IllegalArgumentException("Некорректная операция");
     }
 
     static void check(int a, int b) {
