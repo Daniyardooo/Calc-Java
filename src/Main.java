@@ -52,6 +52,8 @@ public class Main {
             else {
                 throw new IllegalArgumentException("Некорректные входные данные");
             }
+        } else {
+            throw new IllegalArgumentException("формат математической операции не удовлетворяет заданию");
         }
     }
 
@@ -100,7 +102,8 @@ public class Main {
 
     static int romaToArab(String roma) {
         int res = 0;
-        if (roma.matches("[IVXCLlivxc]+")) {
+        roma = roma.toUpperCase();
+        if (roma.matches("[IVXCL]+")) {
             int[] array = new int[roma.length()];
             for (int i = 0; i < roma.length(); i++) {
                 if (roma.charAt(i) == 'I') {
